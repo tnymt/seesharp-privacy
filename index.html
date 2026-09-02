@@ -71,12 +71,18 @@
   </div>
   <h1>SeeSharp Privacy Policy</h1>
 </header>
-<p class="updated">Last updated: July 2026</p>
+<p class="updated">Last updated: September 2026</p>
 
 <p>SeeSharp ("the app") is developed by Tonay Mete.</p>
 
 <h2>Data collection</h2>
-<p>SeeSharp does not collect, store, or transmit any personal data. The app has no servers, no analytics, no advertising SDKs, and no user accounts.</p>
+<p>SeeSharp does not collect, store, or transmit any personal data. The app has no servers of its own, no analytics, no advertising SDKs, no crash reporting, and no user accounts. Nothing you point the camera at is sent anywhere.</p>
+<p>The app does include two Google libraries that talk to Google's servers on your behalf, and only for their own narrow purpose:</p>
+<ul>
+  <li><strong>Google Play Billing</strong> &mdash; contacts Google Play when you open the Pro screen or make the one-time purchase, and when the app checks whether you already own it.</li>
+  <li><strong>Google Play In-App Review</strong> &mdash; contacts Google Play only if you choose to leave a rating.</li>
+</ul>
+<p>Text recognition (OCR) runs entirely on your device using models bundled inside the app. No image or recognized text is sent to Google or to us.</p>
 
 <h2>Camera</h2>
 <p>SeeSharp requests the Camera permission to function as a magnifier. Camera frames are processed entirely on your device to display the live magnified view. No image or video is ever uploaded, transmitted, or stored unless you explicitly choose to save it to your device's gallery or share it using Android's share feature.</p>
@@ -88,11 +94,21 @@
   <li>If you tap "Share," a temporary copy of the image is created in the app's private cache to hand off to the app you choose (e.g., Messages, WhatsApp, Email) via Android's share sheet. SeeSharp does not see or control what the receiving app does with that image.</li>
 </ul>
 
+<h2>Read aloud (text-to-speech)</h2>
+<p>When you use Read Aloud, SeeSharp recognizes the text in the captured frame on your device and then hands that text to the text-to-speech engine installed on your phone (for example Google's Speech Services, Samsung TTS, or whichever engine you have selected in Android settings).</p>
+<p>That engine is a separate app, not part of SeeSharp. Most engines speak offline using downloaded voices, but some may process text on their own servers. What happens to the text after SeeSharp passes it on is governed by that engine's privacy policy. SeeSharp does not keep a copy of the recognized text &mdash; it is held in memory only while you are reading and is discarded when you leave the screen.</p>
+
 <h2>In-app purchase</h2>
 <p>SeeSharp offers an optional one-time in-app purchase to remove a small watermark from saved/shared images. This purchase is processed entirely by Google Play Billing; SeeSharp does not receive or store any payment information.</p>
 
 <h2>Permissions</h2>
-<p>SeeSharp requests only the Camera permission. It does not request location, contacts, storage (beyond the standard scoped access needed to save/share a photo), microphone, or any other permission.</p>
+<p>SeeSharp itself requests only the <strong>Camera</strong> permission, and it is the only permission you will ever be asked to grant.</p>
+<p>For transparency, the installed app also declares three permissions that Android grants automatically, without a prompt. They come from the Google Play libraries listed above, not from SeeSharp's own code:</p>
+<ul>
+  <li><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> &mdash; required by Google Play Billing and Google Play In-App Review. SeeSharp's own code makes no network requests.</li>
+  <li><code>com.android.vending.BILLING</code> &mdash; required to offer the in-app purchase.</li>
+</ul>
+<p>SeeSharp does not request location, contacts, microphone, phone, or storage beyond the standard scoped access needed to save or share a photo.</p>
 
 <h2>Children's privacy</h2>
 <p>SeeSharp does not knowingly collect any data from anyone, including children, because it does not collect data from any user.</p>
